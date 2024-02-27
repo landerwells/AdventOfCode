@@ -7,7 +7,6 @@ mod utils;
 // ... import other year modules
 
 fn main() {
-    // env::set_var("AOCTOKEN", "53616c7465645f5f0c329dd8a6134bb0c7bf859a1b2ef920b2b45574716e4c897139e9b7dd20d62faed6a4b21a8922fdc739ba3d76e0d4a5fe300589d38e1ca2");
     let args: Vec<String> = env::args().collect();
 
     match args.len() {

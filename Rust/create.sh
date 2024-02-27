@@ -8,7 +8,7 @@ day_number=$2
 formatted_day=$(printf "day%02d" "$day_number")
 
 # Define the file path for the destination file
-destination_file="src/aoc$1/$formatted_day.rs"
+destination_file="src/aoc$year/$formatted_day.rs"
 
 # Check if the file already exists
 if [ -f "$destination_file" ]; then
@@ -19,9 +19,15 @@ else
 
     mkdir -p "src/aoc$year"
     cp src/template.rs "$destination_file"
+    
+    # Print debug message
+    echo "Template file copied to: $destination_file"
 
     # Modify the contents of the copied file
-    sed -i '' "s/get_daily_input()/get_daily_input($day_number, $year)/" "$destination_file"
+    sed -i "s/get_daily_input()/get_daily_input($day_number, $year)/" "$destination_file"
+
+    # Print debug message
+    echo "Template file modified."
 
     # Append the new module to the mod.rs file
     mod_file="src/aoc$year/mod.rs"
@@ -29,9 +35,13 @@ else
     # Add new mod declaration
     echo "pub mod $formatted_day;" >> "$mod_file"
 
+    # Print debug message
+    echo "Module added to: $mod_file"
+
     # Add the day's run function call in the run_all function.
     # We can use sed to do this.
-    sed -i '' "/run_all()/ a\\
-    $formatted_day::run();\\
-    " "$mod_file"
+    sed -i "/run_all()/ a\\ $formatted_day::run();\\ " "$mod_file"
+
+    # Print debug message
+    echo "Run function call added to: $mod_file"
 fi
