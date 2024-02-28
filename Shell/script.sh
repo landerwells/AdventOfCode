@@ -1,9 +1,7 @@
-#! /bin/bash
-
 in="1113122113"
-for i in {1..40} 
+for i in {1..50}
 do
-  in=$(echo "$in" | gfold -w1 | guniq -c | gtr '\n' ' ' | gtr -d ' ');
-  echo $in | gtr -d '\n' | gwc -c;
+  in=$(echo "$in" | fold -w1 | uniq -c | tr '\n' ' ' | tr -d ' ');
 done
 
+echo ${#in}
