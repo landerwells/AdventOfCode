@@ -1,10 +1,10 @@
 use std::env;
 
 mod aoc2015;
+mod aoc2016;
 mod aoc2022;
 mod aoc2023;
 mod utils;
-// ... import other year modules
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -34,6 +34,7 @@ fn run_day(year: &str, day: &str) {
         ("2015", "05") => aoc2015::day05::run(),
         ("2015", "06") => aoc2015::day06::run(),
         ("2015", "07") => aoc2015::day07::run(),
+        ("2016", "01") => aoc2016::day01::run(),
         ("2022", "01") => aoc2022::day01::run(),
         ("2022", "10") => aoc2022::day10::run(),
         ("2023", "01") => aoc2023::day01::run(),
