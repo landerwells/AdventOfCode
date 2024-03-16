@@ -13,7 +13,7 @@ fi
 mkdir -p input/${YEAR}
 
 # Check if the file already exists
-FILE="input/${YEAR}/day${DAY}.txt"
+FILE="input/${YEAR}/${DAY}"
 if [ -f "$FILE" ]; then
     echo "File $FILE already exists."
     exit 0

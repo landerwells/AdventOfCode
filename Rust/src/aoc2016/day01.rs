@@ -1,6 +1,5 @@
 use crate::utils::*;
 use indoc::indoc;
-use regex::Regex;
 use std::fs;
 
 pub fn run() {

@@ -1,7 +1,7 @@
 use crate::utils::*;
 
 pub fn run() {
-    let input: String = get_input(year, day);
+    let input: String = get_input(2015, 10);
 
     println!("Part One: {}", part_one(&input));
     println!("---");

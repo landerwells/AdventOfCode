@@ -1,7 +1,7 @@
-use std::fs;
+use crate::utils::*;
 
 pub fn run() {
-    let input: String = fs::read_to_string("../input/2023/day1.txt").unwrap();
+    let input: String = get_input(2023, 1);
 
     println!("Part One: {}", parse_input(&input, false));
     println!("---");
