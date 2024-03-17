@@ -10,7 +10,7 @@ if [ -z "$YEAR" ] || [ -z "$DAY" ]; then
 fi
 
 # Ensure the input directory exists
-mkdir -p input/${YEAR}
+mkdir -p inputs/${YEAR}
 
 # Check if the file already exists
 FILE="input/${YEAR}/${DAY}"
