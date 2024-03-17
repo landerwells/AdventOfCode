@@ -21,7 +21,7 @@ pub fn get_distance(from: Coordinate, to: Coordinate) -> i32 {
 pub fn get_input(year: i32, day: i32) -> String {
     let year: String = year.to_string();
     let day: String = day.to_string();
-    let source: String = format!("../input/{}/{}", year, day);
+    let source: String = format!("../inputs/{}/{}", year, day);
     let input: String = fs::read_to_string(source).unwrap();
     input
 }
