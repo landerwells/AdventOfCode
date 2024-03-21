@@ -1,6 +1,13 @@
 filename = '../../inputs/2015/1'
 
-with open(filename, 'r', encoding='utf-8') as file:
+with open(filename, 'r') as file:
     contents = file.read()
 
-print(contents)
+floor = 0
+for char in contents:
+    if char == '(':
+        floor += 1
+    else:
+        floor -= 1
+
+print(floor)
