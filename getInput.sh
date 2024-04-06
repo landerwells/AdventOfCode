@@ -2,7 +2,7 @@
 
 YEAR=$1
 DAY=$2
-SESSION_TOKEN="53616c7465645f5f10694aff43a1ba9dd3b58e9625bd63dfbd5a3b9440344d75a741ad757011c9bfdea4a254d345af978090e73164b8b648737c49204de724d6"  # Replace this with your session token
+SESSION_TOKEN="53616c7465645f5f109f192fda00e4ac10bfc8d0fc9e8f645d2ba93e7e5650974660b1e4d5414ff38fb4f60b23b63f1721af665b5fe5e5db2ccd8e4175de0752"  # Replace this with your session token
 
 if [ -z "$YEAR" ] || [ -z "$DAY" ]; then
     echo "Usage: $0 <year> <day>"
