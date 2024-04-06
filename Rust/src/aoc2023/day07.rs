@@ -1,9 +1,9 @@
-use aochelpers;
+use crate::utils::*;
 use std::{cmp::Ordering, collections::HashMap};
 
 // Don't feel like refactoring yet
 pub fn run() {
-    let input = aochelpers::get_daily_input(7, 2023).unwrap();
+    let input = get_input(2023, 7);
     let hands: HashMap<String, i64> = build_bids(input.as_str());
     println!(
         "Part 1: {}",

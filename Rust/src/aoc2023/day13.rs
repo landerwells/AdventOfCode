@@ -1,9 +1,7 @@
-use aochelpers;
+use crate::utils::*;
 
 pub fn run() {
-    let input = aochelpers::get_daily_input(13, 2023).unwrap();
-    println!("Day Thirteen Answers:");
-    println!();
+    let input = get_input(2023, 13);
     println!("Part One: {}", solve_part_one(input));
 }
 

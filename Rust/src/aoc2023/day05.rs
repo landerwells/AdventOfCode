@@ -1,9 +1,9 @@
-use aochelpers;
+use crate::utils::*;
 
 type Transformation = (std::ops::Range<usize>, i64);
 
 pub fn run() {
-    let input = aochelpers::get_daily_input(5, 2023).unwrap();
+    let input = get_input(2023, 5);
     println!("Part One Solution: {}", solve_part_one(input));
     // println!("Part Two Solution: {}", solve_part_two("src/input.txt".to_string()));
 }

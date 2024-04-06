@@ -1,13 +1,12 @@
-use aochelpers;
+use crate::utils::*;
 use std::collections::HashMap;
 
 type Coordinates = (i32, i32);
 
 pub fn run() {
-    let input: String = aochelpers::get_daily_input(3, 2015).unwrap();
+    let input = get_input(2015, 3);
     println!("Day Three Answers:");
     println!("Part One: {}", solve_part_one(input.clone()));
-    // println!("Part Two: {}", solve_part_two(input));
 }
 
 fn solve_part_one(input: String) -> i32 {

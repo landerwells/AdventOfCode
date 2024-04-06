@@ -1,26 +1,9 @@
-use crate::utils::parse_grid;
-use aochelpers;
-use indoc::indoc;
+use crate::utils::*;
 
 pub fn run() {
-    let test_input = indoc!(
-        "467..114..
-    ...*......
-    ..35..633.
-    ......#...
-    617*......
-    .....+.58.
-    ..592.....
-    ......755.
-    ...$.*....
-    .664.598.."
-    );
-    let input = aochelpers::get_daily_input(3, 2023).unwrap();
+    let input = get_input(2023, 3);
 
-    println!("Test: {}", part_one(&test_input.to_string()));
     println!("Part One: {}", part_one(&input));
-    println!("---");
-    println!("Test: {}", part_two(&test_input.to_string()));
     println!("Part Two: {}", part_two(&input));
 }
 

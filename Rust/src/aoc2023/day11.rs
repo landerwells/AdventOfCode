@@ -1,13 +1,12 @@
-use aochelpers;
+use crate::utils::*;
 
 pub fn run() {
-    let input = aochelpers::get_daily_input(11, 2023).unwrap();
-    println!("Day Eleven Answers:");
-    println!("Part One: {}", solve_part_one(input.clone(), 2));
-    println!("Part Two: {}", solve_part_one(input, 1000000))
+    let input = get_input(2023, 11);
+    println!("Part One: {}", solve_part_one(&input, 2));
+    println!("Part Two: {}", solve_part_one(&input, 1000000))
 }
 
-fn solve_part_one(input: String, multiple: i32) -> i64 {
+fn solve_part_one(input: &str, multiple: i32) -> i64 {
     let mut grid: Vec<Vec<char>> = input.lines().map(|line| line.chars().collect()).collect();
 
     let mut hash_coordinates = Vec::new();

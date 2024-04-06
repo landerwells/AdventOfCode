@@ -1,15 +1,10 @@
-use aochelpers;
-use indoc::indoc;
+use crate::utils::*;
 use regex::Regex;
 
 pub fn run() {
-    let test_input = indoc!("turn on 0,0 through 999,999");
-    let input: String = aochelpers::get_daily_input(6, 2015).unwrap();
+    let input = get_input(2015, 6);
 
-    println!("Test: {}", part_one(&test_input.to_string()));
     println!("Part One: {}", part_one(&input));
-    println!("---");
-    println!("Test: {}", part_two(&test_input.to_string()));
     println!("Part Two: {}", part_two(&input));
 }
 

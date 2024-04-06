@@ -1,8 +1,7 @@
-use aochelpers;
+use crate::utils::*;
 
 pub fn run() {
-    let input = aochelpers::get_daily_input(1, 2015).unwrap();
-    println!("Day One Answers:");
+    let input = get_input(2015, 1);
     println!(
         "Part One: {}",
         input.chars().fold(0, |acc, c| {
@@ -13,7 +12,7 @@ pub fn run() {
             }
         })
     );
-    println!("Part One: {}", solve_part_two(&input));
+    println!("Part Two: {}", solve_part_two(&input));
 }
 
 fn solve_part_two(input: &String) -> i32 {

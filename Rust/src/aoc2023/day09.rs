@@ -1,10 +1,9 @@
-use aochelpers;
+use crate::utils::*;
 
 pub fn run() {
-    let input = aochelpers::get_daily_input(9, 2023).unwrap();
+    let input = get_input(2023, 9);
     let lines: Vec<String> = input.lines().map(String::from).collect();
 
-    println!("Day Nine Answers:");
     println!("Part One: {}", solve_part_one(lines.clone(), true));
     println!("Part Two: {}", solve_part_one(lines, false));
 }

@@ -1,6 +1,5 @@
-use aochelpers;
+use crate::utils::*;
 use std::collections::VecDeque;
-use std::env;
 
 const LEFT: i32 = 3;
 const RIGHT: i32 = 1;
@@ -9,15 +8,13 @@ const DOWN: i32 = 2;
 type GridPoint = (f64, f64);
 
 pub fn run() {
-    env::set_var("AOCTOKEN", "53616c7465645f5ff30847a61c609fca0373a9571a633ffb28d7209b03e95add495275dc91b67497d11eadc584912ffe03e716e3c719655e3acfc9542ae5a5f7");
-    let input = aochelpers::get_daily_input(10, 2023).unwrap();
+    let input = get_input(2023, 10);
 
-    println!("Day Ten Answers:");
-    println!("Part One: {}", solve(input.clone(), true));
-    println!("Part Two: {}", solve(input, false));
+    println!("Part One: {}", solve(&input, true));
+    println!("Part Two: {}", solve(&input, false));
 }
 
-fn solve(input: String, part_one: bool) -> i32 {
+fn solve(input: &str, part_one: bool) -> i32 {
     let grid: Vec<Vec<char>> = input.lines().map(|line| line.chars().collect()).collect();
 
     let mut points: Vec<GridPoint> = Vec::new();

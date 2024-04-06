@@ -1,22 +1,11 @@
-use aochelpers;
-use indoc::indoc;
 use num::integer::lcm;
 use std::collections::HashMap;
 
+use crate::utils::get_input;
+
 pub fn run() {
-    let test_input = indoc!(
-        "LLR
-
-    AAA = (BBB, BBB)
-    BBB = (AAA, ZZZ)
-    ZZZ = (ZZZ, ZZZ)"
-    );
-    let input = aochelpers::get_daily_input(8, 2023).unwrap();
-
-    println!("Test: {}", part_one(&test_input.to_string()));
+    let input = get_input(2023, 8);
     println!("Part One: {}", part_one(&input));
-    println!("---");
-    println!("Test: {}", part_two(&test_input.to_string()));
     println!("Part Two: {}", part_two(&input));
 }
 

@@ -1,21 +1,11 @@
-use aochelpers;
-use indoc::indoc;
+use crate::utils::*;
 use regex::Regex;
 
 pub fn run() {
-    let test_input = indoc!(
-        "Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
-        Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
-        Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
-        Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
-        Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green"
-    );
-    let input = aochelpers::get_daily_input(2, 2023).unwrap();
+    
+    let input = get_input(2023, 2);
 
-    println!("Test: {}", part_one(&test_input.to_string()));
     println!("Part One: {}", part_one(&input));
-    println!("---");
-    println!("Test: {}", part_two(&test_input.to_string()));
     println!("Part Two: {}", part_two(&input));
 }
 

@@ -1,38 +1,18 @@
-use aochelpers;
-use indoc::indoc;
+use crate::utils::*;
 
 pub fn run() {
-    let test_input = indoc!(
-        "1000
-    2000
-    3000
+    let input = get_input(2022, 1);
 
-    4000
-
-    5000
-    6000
-
-    7000
-    8000
-    9000
-
-    10000"
-    );
-    let input: String = aochelpers::get_daily_input(1, 2022).unwrap();
-
-    println!("Test: {}", part_one(test_input.to_string()));
-    println!("Part One: {}", part_one(input.clone()));
-    println!("---");
-    println!("Test: {}", part_two(test_input.to_string()));
-    println!("Part Two: {}", part_two(input));
+    println!("Part One: {}", part_one(&input));
+    println!("Part Two: {}", part_two(&input));
 }
 
-fn part_one(input: String) -> i32 {
-    *calories(input).iter().max().unwrap()
+fn part_one(input: &str) -> i32 {
+    *calories(input.to_string()).iter().max().unwrap()
 }
 
-fn part_two(input: String) -> i32 {
-    let mut sums: Vec<i32> = calories(input);
+fn part_two(input: &str) -> i32 {
+    let mut sums: Vec<i32> = calories(input.to_string());
 
     sums.sort_unstable_by(|a, b| b.cmp(a));
 

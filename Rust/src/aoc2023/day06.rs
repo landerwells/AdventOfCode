@@ -1,17 +1,9 @@
-use aochelpers;
-use indoc::indoc;
+use crate::utils::*;
 
 pub fn run() {
-    let test_input = indoc!(
-        "Time:      7  15   30
-    Distance:  9  40  200"
-    );
-    let input = aochelpers::get_daily_input(6, 2023).unwrap();
+    let input = get_input(2023, 6);
 
-    println!("Test: {}", part_one(&test_input.to_string(), false));
     println!("Part One: {}", part_one(&input, false));
-    println!("---");
-    println!("Test: {}", part_one(&test_input.to_string(), true));
     println!("Part Two: {}", part_one(&input, true));
 }
 
