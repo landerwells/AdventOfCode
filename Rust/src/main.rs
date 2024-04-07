@@ -2,6 +2,7 @@ use std::env;
 
 mod aoc2015;
 mod aoc2016;
+mod aoc2017;
 mod aoc2022;
 mod aoc2023;
 mod utils;
@@ -19,6 +20,8 @@ fn main() {
 fn run_year(year: &str) {
     match year {
         "2015" => aoc2015::run_all(),
+        "2016" => aoc2016::run_all(),
+        "2017" => aoc2017::run_all(),
         "2022" => aoc2022::run_all(),
         "2023" => aoc2023::run_all(),
         // ... handle other years
@@ -38,6 +41,7 @@ fn run_day(year: &str, day: &str) {
         ("2015", "10") => aoc2015::day10::run(),
         ("2015", "11") => aoc2015::day11::run(),
         ("2016", "01") => aoc2016::day01::run(),
+        ("2017", "01") => aoc2017::day01::run(),
         ("2022", "01") => aoc2022::day01::run(),
         ("2022", "10") => aoc2022::day10::run(),
         ("2023", "01") => aoc2023::day01::run(),

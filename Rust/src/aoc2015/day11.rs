@@ -67,7 +67,7 @@ fn part_one(input_vec: Vec<u32>) -> String {
 
 }
 
-fn part_two(input: &String) -> i32 {
+fn part_two(_input: &String) -> i32 {
     0
 }
 

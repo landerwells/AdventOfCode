@@ -10,14 +10,14 @@ pub fn run() {
 fn part_one(input: &String) -> i32 {
     let instructions: Vec<String> = input.split(", ").map(|s| s.to_string()).collect();
 
-    let mut direction = 0;
-    let mut start: Coordinate = (0, 0);
+    let _direction = 0;
+    let _start: Coordinate = (0, 0);
 
-    for i in instructions {}
+    for _i in instructions {}
 
     0
 }
 
-fn part_two(input: &String) -> i32 {
+fn part_two(_input: &String) -> i32 {
     0
 }

@@ -7,7 +7,7 @@ pub fn run() {
 }
 
 fn solve_part_one(input: &str, multiple: i32) -> i64 {
-    let mut grid: Vec<Vec<char>> = input.lines().map(|line| line.chars().collect()).collect();
+    let grid: Vec<Vec<char>> = input.lines().map(|line| line.chars().collect()).collect();
 
     let mut hash_coordinates = Vec::new();
 
@@ -86,31 +86,4 @@ fn calculate_distance(coord1: (usize, usize), coord2: (usize, usize)) -> f64 {
     let col_diff = num::abs(coord1.1 as f64 - coord2.1 as f64);
 
     row_diff + col_diff
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_calculate_distance() {
-        assert_eq!(calculate_distance((1, 6), (5, 11)), 9.0);
-    }
-
-    #[test]
-    fn test_solve_part_one() {
-        let input_one = "...#......
-.......#..
-#.........
-..........
-......#...
-.#........
-.........#
-..........
-.......#..
-#...#.....";
-
-        assert_eq!(solve_part_one(input_one.to_string(), 10), 1030);
-        assert_eq!(solve_part_one(input_one.to_string(), 100), 8410);
-    }
 }

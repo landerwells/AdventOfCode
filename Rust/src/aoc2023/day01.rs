@@ -2,9 +2,7 @@ use crate::utils::*;
 
 pub fn run() {
     let input: String = get_input(2023, 1);
-
     println!("Part One: {}", parse_input(&input, false));
-    println!("---");
     println!("Part Two: {}", parse_input(&input, true));
 }
 
@@ -28,11 +26,11 @@ fn parse_input(input: &String, replace: bool) -> u32 {
                 line.to_string()
             }
         })
-        .map(|line| {
-            line.chars()
-                .filter_map(|c| c.to_digit(10))
-                .collect::<Vec<u32>>()
-        })
-        .map(|vec| 10 * vec.first().unwrap() + vec.last().unwrap())
+    .map(|line| {
+        line.chars()
+            .filter_map(|c| c.to_digit(10))
+            .collect::<Vec<u32>>()
+    })
+    .map(|vec| 10 * vec.first().unwrap() + vec.last().unwrap())
         .sum()
 }

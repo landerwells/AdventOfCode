@@ -4,7 +4,6 @@ pub fn run() {
     let input: String = get_input(year, day);
 
     println!("Part One: {}", part_one(&input));
-    println!("---");
     println!("Part Two: {}", part_two(&input));
 }
 
