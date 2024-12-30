@@ -8,28 +8,34 @@ pub fn run() {
 }
 
 fn part_one(input: &String) -> i32 {
-    let mut vec: Vec<i32> = input.chars().filter_map(|c| c.to_digit(10)).map(|d| d as i32).collect();
+    let mut vec: Vec<i32> = input
+        .chars()
+        .filter_map(|c| c.to_digit(10))
+        .map(|d| d as i32)
+        .collect();
     vec.push(vec[0]);
     let mut sum = 0;
 
     for i in 0..(vec.len() - 1) {
-        if vec[i] == vec[i+1] {
+        if vec[i] == vec[i + 1] {
             sum += vec[i];
         }
     }
-
-
 
     sum
 }
 
 fn part_two(input: &String) -> i32 {
-    let mut vec: Vec<i32> = input.chars().filter_map(|c| c.to_digit(10)).map(|d| d as i32).collect();
+    let vec: Vec<i32> = input
+        .chars()
+        .filter_map(|c| c.to_digit(10))
+        .map(|d| d as i32)
+        .collect();
     let length = vec.len();
-    let mut  sum = 0;
+    let mut sum = 0;
 
     for i in 0..(vec.len()) {
-        if vec[i] == vec[(i + length/2) % length] {
+        if vec[i] == vec[(i + length / 2) % length] {
             sum += vec[i];
         }
     }
